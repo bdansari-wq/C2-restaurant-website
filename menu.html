@@ -1,49 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Our Menu - Delicious Eats</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Delicious Eats Restaurant menu, including appetizers, main courses, desserts, and beverages.">
+  <title>Our Menu - Delicious Eats</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="header">
-        <h1>Our Menu</h1>
-        <img src="images/logo.jpg" height="200">
-    </div>
-    <div id="nav">
-        <a href="index.html">Home</a> |
-        <a href="menu.html">Menu</a> |
-        <a href="#">Contact</a>
-    </div>
-    <div id="content">
-        <table border="0">
-            <tr>
-                <td>
-                    <h3>Appetizers</h3>
-                    <p>Delicious starters to begin your meal.</p>
-                    <img src="images/dish1.jpg" width="400">
-                </td>
-                <td>
-                    <h3>Main Courses</h3>
-                    <p>Satisfying entrees to delight your palate.</p>
-                    <img src="images/dish2.jpg" width="400">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Desserts</h3>
-                    <p>Sweet treats to finish your dining experience.</p>
-                    <img src="images/dish3.jpg" width="400">
-                </td>
-                <td>
-                    <h3>Beverages</h3>
-                    <p>A selection of drinks to complement your meal.</p>
-                    <img src="images/dish4.jpg" width="400">
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div id="footer">
-        <p>&copy; 2023 Delicious Eats</p>
-    </div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <h1>Our Menu</h1>
+    <img src="images/logo.jpg" alt="Delicious Eats Restaurant logo" class="logo">
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="main-content" class="content menu-grid">
+    <section class="column">
+      <h2>Appetizers</h2>
+      <p>Delicious starters to begin your meal.</p>
+      <img src="images/dish1.jpg" alt="Appetizer dish from Delicious Eats">
+    </section>
+
+    <section class="column">
+      <h2>Main Courses</h2>
+      <p>Satisfying entrees to delight your palate.</p>
+      <img src="images/dish2.jpg" alt="Main course dish from Delicious Eats">
+    </section>
+
+    <section class="column">
+      <h2>Desserts</h2>
+      <p>Sweet treats to finish your dining experience.</p>
+      <img src="images/dish3.jpg" alt="Dessert dish from Delicious Eats">
+    </section>
+
+    <section class="column">
+      <h2>Beverages</h2>
+      <p>A selection of drinks to complement your meal.</p>
+      <img src="images/dish4.jpg" alt="Beverage selection from Delicious Eats">
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <p>&copy; 2023 Delicious Eats</p>
+  </footer>
 </body>
 </html>
