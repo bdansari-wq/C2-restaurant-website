@@ -1,54 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the Delicious Eats Restaurant menu, including appetizers, main courses, desserts, and beverages.">
-  <title>Our Menu - Delicious Eats</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+* {
+  box-sizing: border-box;
+}
 
-  <header class="site-header">
-    <h1>Our Menu</h1>
-    <img src="images/logo.jpg" srcset="images/logo.jpg 800w" sizes="(max-width: 768px) 150px, 200px" alt="Delicious Eats Restaurant logo" class="logo">
-  </header>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #222222;
+}
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="#contact">Contact</a>
-  </nav>
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px;
+  border: 2px solid #000000;
+  z-index: 1000;
+}
 
-  <main id="main-content" class="content menu-grid">
-    <section class="column">
-      <h2>Appetizers</h2>
-      <p>Delicious starters to begin your meal.</p>
-      <img src="images/dish1.jpg" srcset="images/dish1.jpg 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Appetizer dish from Delicious Eats">
-    </section>
+.skip-link:focus {
+  left: 10px;
+}
 
-    <section class="column">
-      <h2>Main Courses</h2>
-      <p>Satisfying entrees to delight your palate.</p>
-      <img src="images/dish2.jpg" srcset="images/dish2.jpg 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Main course dish from Delicious Eats">
-    </section>
+.site-header {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
 
-    <section class="column">
-      <h2>Desserts</h2>
-      <p>Sweet treats to finish your dining experience.</p>
-      <img src="images/dish3.jpg" srcset="images/dish3.jpg 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Dessert dish from Delicious Eats">
-    </section>
+.logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 
-    <section class="column">
-      <h2>Beverages</h2>
-      <p>A selection of drinks to complement your meal.</p>
-      <img src="images/dish4.jpg" srcset="images/dish4.jpg 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="Beverage selection from Delicious Eats">
-    </section>
-  </main>
+.site-nav {
+  background-color: #444444;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem;
+}
 
-  <footer id="contact" class="site-footer">
-    <p>&copy; 2023 Delicious Eats</p>
-  </footer>
-</body>
-</html>
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
